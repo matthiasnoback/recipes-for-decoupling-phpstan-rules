@@ -1,0 +1,25 @@
+{
+    "require": {
+        "php": "^8.1",
+        "twig/twig": "^3.4",
+        "symfony/console": "^6.1",
+        "illuminate/database": "^9.19"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.7",
+        "symplify/easy-coding-standard": "^11.0",
+        "symplify/coding-standard": "^11.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Utils\\PHPStan\\": "utils/PHPStan/src",
+            "Utils\\PHPStan\\Tests\\": "utils/PHPStan/tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}

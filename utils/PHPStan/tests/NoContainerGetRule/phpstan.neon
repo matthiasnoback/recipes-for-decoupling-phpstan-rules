@@ -1,0 +1,9 @@
+services:
+    -
+        class: Utils\PHPStan\NoContainerGetRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Utils\PHPStan\DeterminationBasedOnSuffix
+        arguments:
+            suffix: "Controller"

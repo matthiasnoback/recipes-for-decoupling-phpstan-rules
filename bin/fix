@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eu
+
+# Run several times to fix things fixed by the first fix run
+vendor/bin/ecs check --fix
+vendor/bin/ecs check --fix
