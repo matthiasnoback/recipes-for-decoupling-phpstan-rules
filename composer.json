@@ -11,6 +11,7 @@
         "symplify/easy-coding-standard": "^11.0",
         "symplify/coding-standard": "^11.0"
     },
+    "license": "MIT",
     "autoload-dev": {
         "psr-4": {
             "Utils\\PHPStan\\": "utils/PHPStan/src",
