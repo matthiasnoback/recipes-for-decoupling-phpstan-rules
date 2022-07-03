@@ -1,0 +1,5 @@
+parameters:
+    paths:
+        - utils/PHPStan/src/
+    # Needs to be 9
+    level: 7
