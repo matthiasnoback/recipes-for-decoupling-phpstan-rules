@@ -16,10 +16,13 @@ use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Twig\NodeTraverser;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class ForbiddenTwigVarsRule implements Rule
 {
     /**
-     * @param array<string> $forbiddenVariables
+     * @param list<string> $forbiddenVariables
      */
     public function __construct(
         private readonly string $templateDir,

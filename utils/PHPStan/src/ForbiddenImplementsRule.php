@@ -10,6 +10,9 @@ use PHPStan\Node\InClassNode;
 use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleErrorBuilder;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PHPStan\Node\InClassNode>
+ */
 final class ForbiddenImplementsRule implements Rule
 {
     private string $forbiddenInterface;

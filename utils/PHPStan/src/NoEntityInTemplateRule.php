@@ -14,6 +14,9 @@ use PHPStan\Type\Constant\ConstantArrayType;
 use PHPStan\Type\ObjectType;
 use Twig\Environment;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class NoEntityInTemplateRule implements Rule
 {
     public function __construct(

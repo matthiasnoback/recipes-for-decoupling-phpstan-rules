@@ -11,6 +11,9 @@ use PHPStan\Node\InClassNode;
 use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleErrorBuilder;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PHPStan\Node\InClassNode>
+ */
 final class OneActionPerControllerRule implements Rule
 {
     public function __construct(
@@ -44,7 +47,7 @@ final class OneActionPerControllerRule implements Rule
         if (count($actionMethods) > 1) {
             return [
                 RuleErrorBuilder::message(
-                    sprintf('Controller %s should have only one action', $scope->getClassReflection() ->getName(),)
+                    sprintf('Controller %s should have only one action', $scope->getClassReflection()->getName(),)
                 )->build(),
             ];
         }

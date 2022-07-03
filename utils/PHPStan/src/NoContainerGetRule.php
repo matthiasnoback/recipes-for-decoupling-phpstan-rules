@@ -13,6 +13,9 @@ use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class NoContainerGetRule implements Rule
 {
     public function __construct(
