@@ -1,0 +1,65 @@
+rules:
+    - Utils\PHPStan\AutoIncrementingModelIdRule
+#    - Utils\PHPStan\ForbiddenOverrideRule
+#    - Utils\PHPStan\ForbiddenParentClassRule
+#    - Utils\PHPStan\ForbiddenTwigFunctionsRule
+#    - Utils\PHPStan\ForbiddenTwigVarsRule
+    - Utils\PHPStan\FriendRule
+    - Utils\PHPStan\ModelCreatedWithArrayRule
+ #   - Utils\PHPStan\NoContainerGetRule
+#    - Utils\PHPStan\NoEntityInTemplateRule
+    - Utils\PHPStan\NoErrorSilencingRule
+#    - Utils\PHPStan\OneActionPerControllerRule
+    - Utils\PHPStan\UseEmailValidatorRule
+
+services:
+    determinationBasedOnSuffix:
+        class: Utils\PHPStan\DeterminationBasedOnSuffix
+    -
+        class: Utils\PHPStan\ActionAllowedParameterRule
+        arguments:
+            allowedParameterType: %allowedParameterType%
+            determination: @determinationBasedOnSuffix
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Utils\PHPStan\ActionReturnsResponseRule
+        arguments:
+            requiredReturnType: %requiredReturnType%
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Utils\PHPStan\ForbiddenImplementsRule
+        arguments:
+            forbiddenInterface: %forbiddenInterface%
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Utils\PHPStan\ForbiddenMethodCallRule
+        arguments:
+            class: %forbiddenMethodCallClass%
+            method: %forbiddenMethodCallMethod%
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Utils\PHPStan\ForbiddenObjectTypeInCommandRule
+        arguments:
+            forbiddenType: %forbiddenObjectTypeInCommandType%
+        tags:
+            - phpstan.rules.rule
+
+parametersSchema:
+    allowedParameterType: string()
+    requiredReturnType: string()
+    forbiddenInterface: string()
+    forbiddenMethodCallClass: string()
+    forbiddenMethodCallMethod: string()
+    forbiddenObjectTypeInCommandType: string()
+
+parameters:
+    allowedParameterType: "string"
+    requiredReturnType: "string"
+    forbiddenInterface: "notThisInterface"
+    forbiddenMethodCallClass: "forThisClass"
+    forbiddenMethodCallMethod: "notThisMethod"
+    forbiddenObjectTypeInCommandType: "notThisType"
