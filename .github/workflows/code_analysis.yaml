@@ -12,9 +12,10 @@ jobs:
             fail-fast: false
             matrix:
                 include:
-                    - name: "Tests"
-                      run: |
-                        composer exec -- phpunit
+                    -   name: "Tests"
+                        dependencies: "highest"
+                        run: |
+                            composer exec -- phpunit
 
         name: ${{ matrix.name }}
         runs-on: "ubuntu-latest"
