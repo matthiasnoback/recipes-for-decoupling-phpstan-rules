@@ -3,7 +3,7 @@
     <testsuites>
         <!-- ... -->
         <testsuite name="PHPStan rule tests">
-            <directory>./utils/PHPStan/tests</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>

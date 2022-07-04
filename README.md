@@ -4,4 +4,4 @@ In the book ["Recipes for Decoupling"](https://leanpub.com/recipes-for-decouplin
 
 This project contains all the final versions of each of the rules from the book. They are not production-ready but feel free to use them as a starting point for your own custom rules.
 
-[![Cover of "Recipes for Decoupling"](resources/cover.png)](https://leanpub.com/recipes-for-decoupling/)
+[![Cover of "Recipes for Decoupling"](.github/resources/cover.png)](https://leanpub.com/recipes-for-decoupling/)
