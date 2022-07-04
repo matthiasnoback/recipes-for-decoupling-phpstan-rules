@@ -10,11 +10,12 @@ use PHPStan\Node\InClassMethodNode;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Reflection\ParametersAcceptorSelector;
 use PHPStan\Rules\Rule;
-
-
 use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PHPStan\Node\InClassMethodNode>
+ */
 final class ActionReturnsResponseRule implements Rule
 {
     public function __construct(
@@ -67,11 +68,9 @@ final class ActionReturnsResponseRule implements Rule
             RuleErrorBuilder::message(
                 sprintf(
                     'Method %s::%s() should return %s',
-                    $scope->getFunction()
-                        ->getDeclaringClass()
+                    $methodReflection->getDeclaringClass()
                         ->getName(),
-                    $scope->getFunction()
-                        ->getName(),
+                    $methodReflection->getName(),
                     $this->requiredReturnType,
                 )
             )->build(),

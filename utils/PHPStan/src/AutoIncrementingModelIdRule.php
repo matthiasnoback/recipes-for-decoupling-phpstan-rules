@@ -13,6 +13,9 @@ use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\Constant\ConstantBooleanType;
 use PHPStan\Type\Type;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PHPStan\Node\ClassPropertiesNode>
+ */
 final class AutoIncrementingModelIdRule implements Rule
 {
     public function getNodeType(): string

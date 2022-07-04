@@ -10,6 +10,9 @@ use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleErrorBuilder;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\ErrorSuppress>
+ */
 final class NoErrorSilencingRule implements Rule
 {
     public function getNodeType(): string

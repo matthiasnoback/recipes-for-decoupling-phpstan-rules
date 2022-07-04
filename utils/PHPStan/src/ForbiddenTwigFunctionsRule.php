@@ -17,10 +17,13 @@ use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
 use Twig\NodeTraverser;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class ForbiddenTwigFunctionsRule implements Rule
 {
     /**
-     * @param array<string> $forbiddenFunctions
+     * @param list<string> $forbiddenFunctions
      */
     public function __construct(
         private readonly string $templateDir,

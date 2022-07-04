@@ -14,6 +14,9 @@ use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\StaticCall>
+ */
 final class ModelCreatedWithArrayRule implements Rule
 {
     public function getNodeType(): string

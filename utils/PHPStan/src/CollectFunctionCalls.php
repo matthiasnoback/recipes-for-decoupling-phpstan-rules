@@ -12,7 +12,7 @@ use Twig\NodeVisitor\NodeVisitorInterface;
 final class CollectFunctionCalls implements NodeVisitorInterface
 {
     /**
-     * @var array<FunctionExpression>
+     * @var list<FunctionExpression>
      */
     private array $functionCalls = [];
 
@@ -24,6 +24,9 @@ final class CollectFunctionCalls implements NodeVisitorInterface
         return $node;
     }
 
+    /**
+     * @return list<FunctionExpression>
+     */
     public function functionCalls(): array
     {
         return $this->functionCalls;

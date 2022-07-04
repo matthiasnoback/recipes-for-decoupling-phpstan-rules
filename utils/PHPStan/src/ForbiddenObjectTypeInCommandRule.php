@@ -12,6 +12,9 @@ use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 use Symfony\Component\Console\Command\Command;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class ForbiddenObjectTypeInCommandRule implements Rule
 {
     private readonly ObjectType $forbiddenType;

@@ -9,7 +9,8 @@
         "phpunit/phpunit": "^9.5",
         "phpstan/phpstan": "^1.7",
         "symplify/easy-coding-standard": "^11.0",
-        "symplify/coding-standard": "^11.0"
+        "symplify/coding-standard": "^11.0",
+        "illuminate/http": "^9.19"
     },
     "license": "MIT",
     "autoload-dev": {

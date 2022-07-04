@@ -12,7 +12,7 @@ use Twig\NodeVisitor\NodeVisitorInterface;
 final class CollectVariableNamesVisitor implements NodeVisitorInterface
 {
     /**
-     * @var array<NameExpression>
+     * @var list<NameExpression>
      */
     private array $variableNames = [];
 
@@ -24,6 +24,9 @@ final class CollectVariableNamesVisitor implements NodeVisitorInterface
         return $node;
     }
 
+    /**
+     * @return list<NameExpression>
+     */
     public function variableNames(): array
     {
         return $this->variableNames;

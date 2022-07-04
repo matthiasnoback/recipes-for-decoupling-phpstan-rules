@@ -15,6 +15,9 @@ use PHPStan\Type\Constant\ConstantArrayType;
 use PHPStan\Type\Constant\ConstantStringType;
 use PHPStan\Type\ObjectType;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class UseEmailValidatorRule implements Rule
 {
     public function getNodeType(): string

@@ -14,6 +14,9 @@ use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 use ReflectionException;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PhpParser\Node\Expr\MethodCall>
+ */
 final class FriendRule implements Rule
 {
     public function __construct(private readonly ReflectionProvider $reflectionProvider)

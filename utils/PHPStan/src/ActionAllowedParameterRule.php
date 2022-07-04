@@ -11,6 +11,9 @@ use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 
+/**
+ * @implements \PHPStan\Rules\Rule<\PHPStan\Node\InClassMethodNode>
+ */
 final class ActionAllowedParameterRule implements Rule
 {
     public function __construct(
