@@ -16,6 +16,10 @@ jobs:
                         dependencies: "highest"
                         run: |
                             composer exec -- phpunit
+                    -   name: "Static Analysis"
+                        dependencies: "highest"
+                        run: |
+                            composer exec -- phpstan
 
         name: ${{ matrix.name }}
         runs-on: "ubuntu-latest"
